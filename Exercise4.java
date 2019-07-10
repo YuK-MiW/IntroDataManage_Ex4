@@ -1,4 +1,12 @@
 import java.util.Random;
+import java.util.Scanner;
+/*
+class Greet{
+  void Greet(){
+    System.out.print("What is your name?\n> ");
+  }
+}
+*/
 
 class Exercise4{
   public static void main(String[] args){
@@ -8,6 +16,8 @@ class Exercise4{
     Random r;
 
     r = new Random();
+
+    Greet();
 
     // r.nextInt(6) generates 0 to 5
     dice1 = r.nextInt(6) + 1;
@@ -23,4 +33,13 @@ class Exercise4{
     if(total >= 7)System.out.println("You won!");
     else System.out.println("You lost!");
   }
+
+  public static void Greet(){
+    System.out.print("What is your name?\n> ");
+    Scanner scan = new Scanner(System.in);
+    String str = scan.next();
+    System.out.println("Hello, " + str + "!");
+
+  }
+
 }
