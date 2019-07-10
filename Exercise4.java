@@ -3,6 +3,20 @@ import java.util.Scanner;
 
 class Exercise4{
   public static void main(String[] args){
+
+    System.out.println("Welcome to DiceGame!");
+    System.out.print("How many people do you play?\n> ");
+
+    Scanner scan = new Scanner(System.in);
+    int num = scan.nextInt();
+
+    for(int i = 0; i < num; i++){
+    System.out.println("\nPlayer " + (i+1));
+    DiceRoll();
+      }
+    }
+
+  public static void DiceRoll(){
     int dice1;
     int dice2;
     int total;
@@ -25,7 +39,7 @@ class Exercise4{
     if(total >= 7)System.out.println(str + " won!");
     else System.out.println(str + " lost!");
   }
-  
+
   public static String Greet(){
     System.out.print("What is your name?\n> ");
     Scanner scan = new Scanner(System.in);
